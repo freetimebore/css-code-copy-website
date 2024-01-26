@@ -1,0 +1,15 @@
+<div class="cont">
+  <div class="container">
+    <div
+      *ngFor="let box of boxes"
+      class="style-box"
+      (click)="copyCode(box)"
+      [ngStyle]="{ 'box-shadow': box.cssCode }"
+    >
+      <div *ngIf="box.isCopied" class="success-message">
+        Code from {{ box.name }} copied successfully!
+      </div>
+      <div class="box-name">{{ box.name }}</div>
+    </div>
+  </div>
+</div>
