@@ -7,6 +7,8 @@ import { CodeCopyComponent } from './code-copy/code-copy.component';
 import { HeaderComponent } from './header/header.component';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { HomeCardsComponent } from './home-cards/home-cards.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FooterComponent } from './footer/footer.component';
     CodeCopyComponent,
     HeaderComponent,
     SuccessMessageComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    HomeCardsComponent
   ],
   imports: [
     BrowserModule,

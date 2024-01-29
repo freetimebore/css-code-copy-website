@@ -1,0 +1,50 @@
+.banner {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fafbfd;
+}
+
+.banner > .banner-left,
+.banner > .banner-right {
+  width: 50%;
+}
+
+.banner > .banner-left {
+  padding-left: 10%;
+  color: #272727;
+}
+
+.banner > .banner-left span {
+  color: #ff0000;
+}
+
+.banner > .banner-left .welcome {
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.banner > .banner-left .title {
+  font-size: 24px;
+  font-weight: 400;
+  padding-left: 15px;
+}
+
+.banner > .banner-left .content {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.banner > .banner-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-right > img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
