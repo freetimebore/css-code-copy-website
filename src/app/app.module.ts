@@ -9,6 +9,7 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
+import { HtmlHomePageComponent } from './html-home-page/html-home-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeCardsComponent } from './home-cards/home-cards.component';
     SuccessMessageComponent,
     FooterComponent,
     HomeComponent,
-    HomeCardsComponent
+    HomeCardsComponent,
+    HtmlHomePageComponent
   ],
   imports: [
     BrowserModule,

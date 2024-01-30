@@ -51,6 +51,7 @@
   color: #272727;
   position: relative;
   border-bottom: 1.5px solid #272727;
+  cursor: pointer;
 }
 
 .hover-animation::after {
