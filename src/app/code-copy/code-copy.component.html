@@ -1,15 +1,26 @@
 <div class="cont">
   <div class="container">
-    <div
-      *ngFor="let box of boxes"
-      class="style-box"
-      (click)="copyCode(box)"
-      [ngStyle]="{ 'box-shadow': box.cssCode }"
-    >
-      <div *ngIf="box.isCopied" class="success-message">
-        Code from {{ box.name }} copied successfully!
+    <div *ngFor="let box of boxes" class="card">
+      <div class="cover">
+        <div
+          class="style-box"
+          (click)="copyCode(box)"
+          [ngStyle]="{ 'box-shadow': box.cssCode }"
+        >
+          <div class="box-name">{{ box.name }}</div>
+          <div *ngIf="box.isCopied" class="success-message">Copied</div>
+        </div>
+
+        <div class="info" (click)="copyCode(box)">
+          <div class="code-editor">
+            <textarea (click)="showSuccessMessage(box)">{{
+              "box-shadow: " + box.cssCode + ";"
+            }}</textarea>
+
+            <i class="fas fa-clipboard-list copy-icon"></i>
+          </div>
+        </div>
       </div>
-      <div class="box-name">{{ box.name }}</div>
     </div>
   </div>
 </div>

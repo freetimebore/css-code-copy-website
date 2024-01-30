@@ -1,47 +1,48 @@
-/* For screens up to 600px wide */
-@media only screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .style-box {
-    width: 100%;
-    margin: 10px 0;
-  }
+/* Add card styling */
+.card {
+  display: inline-block;
+  width: 300px; /* Adjust as needed for your layout */
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #383838;
+  padding: 30px;
+  margin-bottom: 50px;
+  border-radius: 30px;
 }
+
 .cont {
   width: 80%;
   align-items: center;
   margin: auto;
 }
+
 .container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
+/* Style for the box */
 .style-box {
+  position: relative;
   width: 200px;
   height: 200px;
-  margin: 10px;
-  margin-bottom: 100px;
-  border: 1px solid #ddd;
   cursor: pointer;
   box-sizing: border-box;
   background-color: #f9f9f9;
-  border-radius: 5px;
   transition: background-color 0.3s;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  margin: auto; /* Center the box within the card */
+  margin-bottom: 30px;
 }
 
-.style-box:hover {
-  background-color: #e0e0e0;
-}
-
+/* Style for the success message */
 .success-message {
   color: rgb(255, 255, 255);
   margin-top: 10px;
@@ -52,17 +53,71 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
-
   transform: translate(-50%, -50%);
   z-index: 1;
-  display: none;
-}
-
-.style-box:hover .success-message {
   display: block;
 }
 
-.box-name {
-  font-weight: bold;
-  margin-bottom: 5px;
+/* Show success message on hover */
+.style-box:hover .success-message {
+}
+
+/* Add styling for the information section */
+.info {
+  background-color: #353535;
+  position: relative;
+}
+
+/* Style for the code editor */
+.code-editor {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+}
+
+/* Style for the textarea inside the code editor */
+.code-editor textarea {
+  flex: 1;
+  /* Take up remaining space */
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  resize: none;
+  display: block;
+  height: 70px;
+}
+
+.cover {
+  padding-top: 50px;
+  background-color: #ffffff;
+}
+/* Show code editor when box is clicked */
+.style-box.clicked + .info .code-editor {
+  display: block;
+}
+
+/* Style for the copy icon */
+.copy-icon {
+  margin-left: 20px; /* Adjust as needed */
+  cursor: pointer;
+  color: chartreuse;
+}
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .code-editor {
+    width: 100%;
+    margin: 10px 0;
+  }
 }

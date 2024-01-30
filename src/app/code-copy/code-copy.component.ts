@@ -1,4 +1,5 @@
 // code-copy.component.ts
+
 import { Component } from '@angular/core';
 import { Box } from './box.interface';
 import { boxes } from './boxes';
@@ -23,5 +24,12 @@ export class CodeCopyComponent {
     setTimeout(() => {
       box.isCopied = false;
     }, 2000);
+  }
+
+  showSuccessMessage(box: Box) {
+    if (box.isCopied) {
+      // Logic to handle showing the success message
+      console.log('Success message should be displayed');
+    }
   }
 }

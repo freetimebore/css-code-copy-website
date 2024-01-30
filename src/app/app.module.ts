@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { HtmlHomePageComponent } from './html-home-page/html-home-page.component';
+import { FormHtmlCopyCodeComponent } from './form-html-copy-code/form-html-copy-code.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HtmlHomePageComponent } from './html-home-page/html-home-page.component
     FooterComponent,
     HomeComponent,
     HomeCardsComponent,
-    HtmlHomePageComponent
+    HtmlHomePageComponent,
+    FormHtmlCopyCodeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

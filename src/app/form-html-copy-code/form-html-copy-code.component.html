@@ -1,0 +1,22 @@
+<div class="form-container">
+  <div
+    *ngFor="let forms of forms2; let j = index"
+    class="form-style"
+    [style.background-color]="forms.formColor"
+  >
+    <div class="form-output">
+      <h2>{{ forms.name }}</h2>
+      <div [innerHTML]="getTrustedHtml2(forms)" key="i"></div>
+      <!-- Use form.name as a key to retrieve the HTML content from outputMap -->
+    </div>
+
+    <div class="code-output">
+      <textarea [(ngModel)]="forms.code"></textarea>
+      <button (click)="copyToClipboard(j)" [disabled]="forms.isCopied">
+        Copy to Clipboard
+      </button>
+      <span *ngIf="forms.isCopied">Copied!</span>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
