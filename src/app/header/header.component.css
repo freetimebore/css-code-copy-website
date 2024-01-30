@@ -27,7 +27,8 @@ nav ul li a {
   color: #fff;
 } */
 
-header {
+.headermain {
+  font-family: "Josefin Sans", sans-serif;
   height: 10vh;
   width: 100%;
   background-color: #272727;
@@ -50,25 +51,25 @@ header {
   color: #ff0000;
 }
 
-nav {
+.navmain {
   width: 50%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 100px;
 }
 
-nav > li {
+.navmain > li {
   list-style: none;
 }
 
-nav > li > a {
+.navmain > li > a {
   position: relative;
   font-size: 16px;
   color: #e5e5e5;
   text-decoration: none;
 }
 
-nav > li > a:hover {
+.navmain > li > a:hover {
   color: #ff0000;
 }
 

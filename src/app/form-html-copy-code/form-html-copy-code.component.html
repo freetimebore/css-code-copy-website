@@ -5,9 +5,11 @@
     [style.background-color]="forms.formColor"
   >
     <div class="form-output">
-      <h2>{{ forms.name }}</h2>
-      <div [innerHTML]="getTrustedHtml2(forms)" key="i"></div>
-      <!-- Use form.name as a key to retrieve the HTML content from outputMap -->
+      <div class="form-content">
+        <h2>{{ forms.name }}</h2>
+        <div [innerHTML]="getTrustedHtml2(forms)" key="i"></div>
+        <!-- Use form.name as a key to retrieve the HTML content from outputMap -->
+      </div>
     </div>
 
     <div class="code-output">
@@ -19,4 +21,3 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>

@@ -25,6 +25,12 @@
   height: 700px;
   background-color: #f8f8f8;
   overflow: scroll;
+  text-align: center; /* Center the content horizontally */
+}
+
+.form-content {
+  display: inline-block; /* Make the content an inline-block element */
+  text-align: left; /* Reset text-align for the content if needed */
 }
 
 .code-output {

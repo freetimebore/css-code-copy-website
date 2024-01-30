@@ -1,7 +1,7 @@
 
 export const formsData2 = [
   {
-    name: 'Reactive Form',
+    name: 'Simple registration form',
     code: `
 
     <!DOCTYPE html>
@@ -10,167 +10,46 @@ export const formsData2 = [
     <title>Simple registration form</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <style>
-      html, body {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      }
-      body, div, h1, form, input, p { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      color: #666;
-      }
-      h1 {
-      padding: 10px 0;
-      font-size: 32px;
-      font-weight: 300;
-      text-align: center;
-      }
-      p {
-      font-size: 12px;
-      }
-      hr {
-      color: #a9a9a9;
-      opacity: 0.3;
-      }
-      .main-block {
-      max-width: 340px; 
-      min-height: 460px; 
-      padding: 10px 0;
-      margin: auto;
-      border-radius: 5px; 
-      border: solid 1px #ccc;
-      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-      background: #ebebeb; 
-      }
-      form {
-      margin: 0 30px;
-      }
-      .account-type, .gender {
-      margin: 15px 0;
-      }
-      input[type=radio] {
-      display: none;
-      }
-      label#icon {
-      margin: 0;
-      border-radius: 5px 0 0 5px;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      padding-top: 4px;
-      margin-right: 20px;
-      text-indent: 30px;
-      overflow: visible;
-      cursor: pointer;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      width: 9px;
-      height: 4px;
-      top: 8px;
-      left: 4px;
-      border: 3px solid #fff;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      input[type=text], input[type=password] {
-      width: calc(100% - 57px);
-      height: 36px;
-      margin: 13px 0 0 -5px;
-      padding-left: 10px; 
-      border-radius: 0 5px 5px 0;
-      border: solid 1px #cbc9c9; 
-      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-      background: #fff; 
-      }
-      input[type=password] {
-      margin-bottom: 15px;
-      }
-      #icon {
-      display: inline-block;
-      padding: 9.3px 15px;
-      box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-      background: #1c87c9;
-      color: #fff;
-      text-align: center;
-      }
-      .btn-block {
-      margin-top: 10px;
-      text-align: center;
-      }
-      button {
-      width: 100%;
-      padding: 10px 0;
-      margin: 10px auto;
-      border-radius: 5px; 
-      border: none;
-      background: #1c87c9; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
-      }
-      button:hover {
-      background: #26a9e0;
-      }
-    </style>
   </head>
-  <body>
-    <div class="main-block">
-      <h1>Registration</h1>
-      <form action="/">
+  <body style="display: flex; justify-content: center; height: 100%;">
+    <div class="main-block" style="max-width: 340px; min-height: 460px; padding: 10px 0; margin: auto; border-radius: 5px; border: solid 1px #ccc; box-shadow: 1px 2px 5px rgba(0,0,0,.31); background: #ebebeb;">
+      <h1 style="padding: 10px 0; font-size: 32px; font-weight: 300; text-align: center; background-color: #1c87c9; color: #fff;">Registration</h1>
+      <form action="/" style="margin: 0 30px;">
         <hr>
-        <div class="account-type">
-          <input type="radio" value="none" id="radioOne" name="account" checked/>
-          <label for="radioOne" class="radio">Personal</label>
-          <input type="radio" value="none" id="radioTwo" name="account" />
-          <label for="radioTwo" class="radio">Company</label>
+        <div class="account-type" style="margin: 15px 0;">
+          <input type="radio" value="none" id="radioOne" name="account" checked style="display: none;">
+          <label for="radioOne" class="radio" style="position: relative; display: inline-block; padding-top: 4px; margin-right: 20px; text-indent: 30px; overflow: visible; cursor: pointer;">
+            Personal
+          </label>
+          <input type="radio" value="none" id="radioTwo" name="account" style="display: none;">
+          <label for="radioTwo" class="radio" style="position: relative; display: inline-block; padding-top: 4px; margin-right: 20px; text-indent: 30px; overflow: visible; cursor: pointer;">
+            Company
+          </label>
         </div>
         <hr>
-        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-        <input type="text" name="name" id="name" placeholder="Email" required/>
-        <label id="icon" for="name"><i class="fas fa-user"></i></label>
-        <input type="text" name="name" id="name" placeholder="Name" required/>
-        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-        <input type="password" name="name" id="name" placeholder="Password" required/>
+        <label id="icon" for="name" style="display: inline-block; padding: 9.3px 15px; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #1c87c9; color: #fff; text-align: center; border-radius: 5px 0 0 5px;"> <i class="fas fa-envelope"></i> </label>
+        <input type="text" name="name" id="name" placeholder="Email" required style="width: calc(100% - 57px); height: 36px; margin: 13px 0 0 -5px; padding-left: 10px; border-radius: 0 5px 5px 0; border: solid 1px #cbc9c9; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #fff;">
+        <label id="icon" for="name" style="display: inline-block; padding: 9.3px 15px; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #1c87c9; color: #fff; text-align: center; border-radius: 5px 0 0 5px;"> <i class="fas fa-user"></i> </label>
+        <input type="text" name="name" id="name" placeholder="Name" required style="width: calc(100% - 57px); height: 36px; margin: 13px 0 0 -5px; padding-left: 10px; border-radius: 0 5px 5px 0; border: solid 1px #cbc9c9; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #fff;">
+        <label id="icon" for="name" style="display: inline-block; padding: 9.3px 15px; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #1c87c9; color: #fff; text-align: center; border-radius: 5px 0 0 5px;"> <i class="fas fa-unlock-alt"></i> </label>
+        <input type="password" name="name" id="name" placeholder="Password" required style="width: calc(100% - 57px); height: 36px; margin: 13px 0 0 -5px; padding-left: 10px; border-radius: 0 5px 5px 0; border: solid 1px #cbc9c9; box-shadow: 1px 2px 5px rgba(0,0,0,.09); background: #fff;">
         <hr>
-        <div class="gender">
-          <input type="radio" value="none" id="male" name="gender" checked/>
-          <label for="male" class="radio">Male</label>
-          <input type="radio" value="none" id="female" name="gender" />
-          <label for="female" class="radio">Female</label>
+        <div class="gender" style="margin: 15px 0;">
+          <input type="radio" value="none" id="male" name="gender" checked style="display: none;">
+          <label for="male" class="radio" style="position: relative; display: inline-block; padding-top: 4px; margin-right: 20px; text-indent: 30px; overflow: visible; cursor: pointer;"> Male </label>
+          <input type="radio" value="none" id="female" name="gender" style="display: none;">
+          <label for="female" class="radio" style="position: relative; display: inline-block; padding-top: 4px; margin-right: 20px; text-indent: 30px; overflow: visible; cursor: pointer;"> Female </label>
         </div>
         <hr>
-        <div class="btn-block">
-          <p>By clicking Register, you agree on our <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs</a>.</p>
-          <button type="submit" href="/">Submit</button>
+        <div class="btn-block" style="margin-top: 10px; text-align: center;">
+          <p style="font-size: 12px;">By clicking Register, you agree on our <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs</a>.</p>
+          <button type="submit" href="/" style="width: 100%; padding: 10px 0; margin: 10px auto; border-radius: 5px; border: none; background: #1c87c9; font-size: 14px; font-weight: 600; color: #fff;">Submit</button>
         </div>
       </form>
     </div>
   </body>
 </html>
-  
+
       `,
 
 
@@ -178,90 +57,53 @@ export const formsData2 = [
   }, {
 
 
-    name: 'Template-driven Form',
+    name: 'Simple login form',
     code: `
     
     <!DOCTYPE html>
     <html>
-      <head>
+    
+    <head>
         <title>Simple login form</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-        <style>
-          html, body {
-          display: flex;
-          justify-content: center;
-          font-family: Roboto, Arial, sans-serif;
-          font-size: 15px;
-          }
-          form {
-          border: 5px solid #f1f1f1;
-          }
-          input[type=text], input[type=password] {
-          width: 100%;
-          padding: 16px 8px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          box-sizing: border-box;
-          }
-          button {
-          background-color: #8ebf42;
-          color: white;
-          padding: 14px 0;
-          margin: 10px 0;
-          border: none;
-          cursor: grabbing;
-          width: 100%;
-          }
-          h1 {
-          text-align:center;
-          fone-size:18;
-          }
-          button:hover {
-          opacity: 0.8;
-          }
-          .formcontainer {
-          text-align: left;
-          margin: 24px 50px 12px;
-          }
-          .container {
-          padding: 16px 0;
-          text-align:left;
-          }
-          span.psw {
-          float: right;
-          padding-top: 0;
-          padding-right: 15px;
-          }
-          /* Change styles for span on extra small screens */
-          @media screen and (max-width: 300px) {
-          span.psw {
-          display: block;
-          float: none;
-          }
-        </style>
-      </head>
-      <body>
-        <form action="/action_page.php">
-          <h1>Login Form</h1>
-          <div class="formcontainer">
-          <hr/>
-          <div class="container">
-            <label for="uname"><strong>Username</strong></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-            <label for="psw"><strong>Password</strong></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-          </div>
-          <button type="submit">Login</button>
-          <div class="container" style="background-color: #eee">
-            <label style="padding-left: 15px">
-            <input type="checkbox"  checked="checked" name="remember"> Remember me
-            </label>
-            <span class="psw"><a href="#"> Forgot password?</a></span>
-          </div>
+    </head>
+    
+    <body style="display: flex; justify-content: center; font-family: Roboto, Arial, sans-serif; font-size: 15px;">
+    
+        <form action="/action_page.php" style="border: 5px solid #f1f1f1; max-width: 300px; width: 100%;">
+    
+            <h1 style="text-align:center; font-size: 18px;">Login Form</h1>
+    
+            <div style="text-align: left; margin: 24px 50px 12px;">
+                <hr />
+                <div style="padding: 16px 0; text-align:left;">
+                    <label for="uname"><strong>Username</strong></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required
+                        style="width: 100%; padding: 16px 8px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+                    <label for="psw"><strong>Password</strong></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required
+                        style="width: 100%; padding: 16px 8px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+                </div>
+    
+                <button type="submit"
+                    style="background-color: #8ebf42; color: white; padding: 14px 0; margin: 10px 0; border: none; cursor: grabbing; width: 100%;">
+                    Login
+                </button>
+    
+                <div style="background-color: #eee; padding: 16px 0; text-align:left;">
+                    <label style="padding-left: 15px;">
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <span class="psw"><a href="#" style="text-decoration: none; color: #333;"> Forgot password?</a></span>
+                </div>
+            </div>
+    
         </form>
-      </body>
+    
+    </body>
+    
     </html>
+    
     `,
     isCopied: false,
 
@@ -271,107 +113,70 @@ export const formsData2 = [
   }
   ,
   {
-    name: 'Dynamic Form using FormBuilder',
+    name: 'Simple Sign up form',
     code: `
 
     <!DOCTYPE html>
 <html>
-  <title>Simple Sign up from</title>
-  <head>
+
+<title>Simple Sign up form</title>
+
+<head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <style>
-      html, body {
-      display: flex;
-      justify-content: center;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 15px;
-      }
-      form {
-      border: 5px solid #f1f1f1;
-      }
-      input[type=text], input[type=password] {
-      width: 100%;
-      padding: 16px 8px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      }
-      .icon {
-      font-size: 110px;
-      display: flex;
-      justify-content: center;
-      color: #4286f4;
-      }
-      button {
-      background-color: #4286f4;
-      color: white;
-      padding: 14px 0;
-      margin: 10px 0;
-      border: none;
-      cursor: grab;
-      width: 48%;
-      }
-      h1 {
-      text-align:center;
-      fone-size:18;
-      }
-      button:hover {
-      opacity: 0.8;
-      }
-      .formcontainer {
-      text-align: center;
-      margin: 24px 50px 12px;
-      }
-      .container {
-      padding: 16px 0;
-      text-align:left;
-      }
-      span.psw {
-      float: right;
-      padding-top: 0;
-      padding-right: 15px;
-      }
-      /* Change styles for span on extra small screens */
-      @media screen and (max-width: 300px) {
-      span.psw {
-      display: block;
-      float: none;
-      }
-    </style>
-  </head>
-  <body>
-    <form action="/action_page.php">
-      <h1>SIGN UP</h1>
-      <div class="icon">
-        <i class="fas fa-user-circle"></i>
-      </div>
-      <div class="formcontainer">
-      <div class="container">
-        <label for="uname"><strong>Username</strong></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="mail"><strong>E-mail</strong></label>
-        <input type="text" placeholder="Enter E-mail" name="mail" required>
-        <label for="psw"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </div>
-      <button type="submit"><strong>SIGN UP</strong></button>
-      <div class="container" style="background-color: #eee">
-        <label style="padding-left: 15px">
-        <input type="checkbox"  checked="checked" name="remember"> Remember me
-        </label>
-        <span class="psw"><a href="#">Forgot password?</a></span>
-      </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+</head>
+
+<body style="display: flex; justify-content: center; font-family: Roboto, Arial, sans-serif; font-size: 15px;">
+
+    <form action="/action_page.php" style="border: 5px solid #f1f1f1; max-width: 300px; width: 100%;">
+
+        <h1 style="text-align: center; font-size: 18px;">SIGN UP</h1>
+
+        <div style="font-size: 110px; display: flex; justify-content: center; color: #4286f4;">
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <div style="text-align: center; margin: 24px 50px 12px;">
+            <div style="padding: 16px 0; text-align: left;">
+                <label for="uname"><strong>Username</strong></label>
+                <input type="text" placeholder="Enter Username" name="uname" required
+                    style="width: 100%; padding: 16px 8px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+                <label for="mail"><strong>E-mail</strong></label>
+                <input type="text" placeholder="Enter E-mail" name="mail" required
+                    style="width: 100%; padding: 16px 8px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+                <label for="psw"><strong>Password</strong></label>
+                <input type="password" placeholder="Enter Password" name="psw" required
+                    style="width: 100%; padding: 16px 8px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+
+            <button type="submit"
+                style="background-color: #4286f4; color: white; padding: 14px 0; margin: 10px 0; border: none; cursor: grab; width: 48%;">
+                SIGN UP
+            </button>
+
+            <div style="background-color: #eee; padding: 16px 0; text-align: left;">
+                <label style="padding-left: 15px;">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <span class="psw"><a href="#" style="text-decoration: none; color: #333;"> Forgot password?</a></span>
+            </div>
+        </div>
+
     </form>
-  </body>
+
+</body>
+
 </html>
+
   
   `,
 
     isCopied: false
   },
   {
+    name: 'Camp Registration',
     code: `<!DOCTYPE html>
     <html>
       <head>
@@ -573,6 +378,7 @@ export const formsData2 = [
     </script>`
   }
   , {
+    name: "Contact us",
     code: `<!DOCTYPE html>
   <html>
   <head>
@@ -586,7 +392,7 @@ export const formsData2 = [
   </head>
   <body style="min-height: 100vh; padding: 0; margin: 0; font-family: Roboto, Arial, sans-serif; font-size: 14px; color: #666; display: flex; justify-content: center; align-items: center; padding: 20px; background: #5a7233;">
   
-    <form action="/" class="decor" style="position: relative; width: 80%; border-radius: 30px; background: #fff;">
+    <form action="/" class="decor" style="position: relative; width: ; border-radius: 30px; background: #fff;">
       <div class="form-left-decoration" style="content: ''; position: absolute; width: 50px; height: 20px; border-radius: 20px; background: #5a7233; bottom: 60px; left: -30px;"></div>
       <div class="form-right-decoration" style="content: ''; position: absolute; width: 50px; height: 20px; border-radius: 20px; background: #5a7233; top: 60px; right: -30px;"></div>
       <div class="circle" style="position: absolute; bottom: 80px; left: -55px; width: 20px; height: 20px; border-radius: 50%; background: #fff;"></div>
