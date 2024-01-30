@@ -6,7 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { FormHtmlCopyCodeComponent } from './form-html-copy-code/form-html-copy-code.component'
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { HeaderHtmlCopyCodeComponent } from './header-html-copy-code/header-html-copy-code.component';
+import { FooterHtmlCopyCodeComponent } from './footer-html-copy-code/footer-html-copy-code.component';
+import { CardsHtmlCopyCodeComponent } from './cards-html-copy-code/cards-html-copy-code.component';
+import { ButtonHtmlCopyCodeComponent } from './button-html-copy-code/button-html-copy-code.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
@@ -25,7 +28,21 @@ const routes: Routes = [
           },
           {
             path: "box-shadow", component: CodeCopyComponent
-          }
+          },
+          {
+            path: "header", component: HeaderHtmlCopyCodeComponent
+          },
+          {
+            path: "footer", component: FooterHtmlCopyCodeComponent
+          },
+          {
+            path: "cards", component: CardsHtmlCopyCodeComponent
+          },
+          {
+            path: "buttons", component: ButtonHtmlCopyCodeComponent
+          },
+
+
         ]
       },
     ],

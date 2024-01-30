@@ -406,6 +406,6 @@ export const formsData2 = [
     </form>
   </body>
   </html>
-  `
+  `, isCopied: false
   }
 ];

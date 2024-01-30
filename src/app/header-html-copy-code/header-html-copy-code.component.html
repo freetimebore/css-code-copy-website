@@ -1,0 +1,23 @@
+<div class="form-container">
+  <div
+    *ngFor="let header of header2; let j = index"
+    class="form-style"
+    [style.background-color]="header.formColor"
+  >
+    <div class="form-output">
+      <div class="form-content">
+        <h2>{{ header.name }}</h2>
+        <div [innerHTML]="getTrustedHtml2(header)" key="i"></div>
+        <!-- Use form.name as a key to retrieve the HTML content from outputMap -->
+      </div>
+    </div>
+
+    <div class="code-output">
+      <textarea [(ngModel)]="header.code"></textarea>
+      <button (click)="copyToClipboard(j)" [disabled]="header.isCopied">
+        Copy to Clipboard
+      </button>
+      <span *ngIf="header.isCopied">Copied!</span>
+    </div>
+  </div>
+</div>

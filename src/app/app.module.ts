@@ -13,6 +13,10 @@ import { HtmlHomePageComponent } from './html-home-page/html-home-page.component
 import { FormHtmlCopyCodeComponent } from './form-html-copy-code/form-html-copy-code.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { HeaderHtmlCopyCodeComponent } from './header-html-copy-code/header-html-copy-code.component';
+import { FooterHtmlCopyCodeComponent } from './footer-html-copy-code/footer-html-copy-code.component';
+import { CardsHtmlCopyCodeComponent } from './cards-html-copy-code/cards-html-copy-code.component';
+import { ButtonHtmlCopyCodeComponent } from './button-html-copy-code/button-html-copy-code.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ContactComponent } from './contact/contact.component';
     HtmlHomePageComponent,
     FormHtmlCopyCodeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderHtmlCopyCodeComponent,
+    FooterHtmlCopyCodeComponent,
+    CardsHtmlCopyCodeComponent,
+    ButtonHtmlCopyCodeComponent
   ],
   imports: [
     BrowserModule,
