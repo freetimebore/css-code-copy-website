@@ -9,14 +9,18 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
-import { HtmlHomePageComponent } from './html-home-page/html-home-page.component';
-import { FormHtmlCopyCodeComponent } from './form-html-copy-code/form-html-copy-code.component';
+import { HtmlHomePageComponent } from './html/html-home-page/html-home-page.component';
+import { FormHtmlCopyCodeComponent } from './html/form-html-copy-code/form-html-copy-code.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { HeaderHtmlCopyCodeComponent } from './header-html-copy-code/header-html-copy-code.component';
-import { FooterHtmlCopyCodeComponent } from './footer-html-copy-code/footer-html-copy-code.component';
-import { CardsHtmlCopyCodeComponent } from './cards-html-copy-code/cards-html-copy-code.component';
-import { ButtonHtmlCopyCodeComponent } from './button-html-copy-code/button-html-copy-code.component';
+import { HeaderHtmlCopyCodeComponent } from './html/header-html-copy-code/header-html-copy-code.component';
+import { FooterHtmlCopyCodeComponent } from './html/footer-html-copy-code/footer-html-copy-code.component';
+import { CardsHtmlCopyCodeComponent } from './html/cards-html-copy-code/cards-html-copy-code.component';
+import { ButtonHtmlCopyCodeComponent } from './html/button-html-copy-code/button-html-copy-code.component';
+import { JsHomePageComponent } from './js/js-home-page/js-home-page.component';
+import { JavaHomePageComponent } from './java/java-home-page/java-home-page.component';
+import { PythonHomePageComponent } from './python/python-home-page/python-home-page.component';
+import { CHomePageComponent } from './c/c-home-page/c-home-page.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +38,14 @@ import { ButtonHtmlCopyCodeComponent } from './button-html-copy-code/button-html
     HeaderHtmlCopyCodeComponent,
     FooterHtmlCopyCodeComponent,
     CardsHtmlCopyCodeComponent,
-    ButtonHtmlCopyCodeComponent
+    ButtonHtmlCopyCodeComponent,
+    JsHomePageComponent,
+    JavaHomePageComponent,
+    PythonHomePageComponent,
+    CHomePageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

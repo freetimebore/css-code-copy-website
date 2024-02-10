@@ -1,0 +1,23 @@
+<div class="form-container">
+  <div
+    *ngFor="let footer of footer2; let j = index"
+    class="form-style"
+    [style.background-color]="footer.formColor"
+  >
+    <div class="form-output">
+      <div class="form-content">
+        <h2>{{ footer.name }}</h2>
+        <div [innerHTML]="getTrustedHtml2(footer)" key="i"></div>
+        <!-- Use form.name as a key to retrieve the HTML content from outputMap -->
+      </div>
+    </div>
+
+    <div class="code-output">
+      <textarea [(ngModel)]="footer.code"></textarea>
+      <button (click)="copyToClipboard(j)" [disabled]="footer.isCopied">
+        Copy to Clipboard
+      </button>
+      <span *ngIf="footer.isCopied">Copied!</span>
+    </div>
+  </div>
+</div>

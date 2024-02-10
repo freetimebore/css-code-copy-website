@@ -1,0 +1,94 @@
+/* my-form.component.css */
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.form-style {
+  margin: 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 80%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-output,
+.code-output {
+  padding: 20px;
+}
+.form-output {
+  flex: 1;
+  height: 700px;
+  background-color: #f8f8f8;
+  overflow: scroll;
+  text-align: center; /* Center the content horizontally */
+}
+
+.form-content {
+  display: inline-block; /* Make the content an inline-block element */
+  text-align: left; /* Reset text-align for the content if needed */
+}
+
+.code-output {
+  flex: 1;
+  height: 700px;
+  background-color: white; /* Set the background color to white */
+  padding: 20px;
+  border: 1px solid #ddd; /* Add a border for better visibility */
+  border-radius: 8px;
+  /* Enable scrolling if content overflows */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+span {
+  color: #4caf50;
+  margin-left: 8px;
+  font-weight: bold;
+}
+textarea {
+  height: 600px;
+  width: 100%;
+  margin: 0;
+  white-space: pre-wrap;
+  resize: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  background-color: #011627; /* Dark background color */
+  color: #70c3b6; /* Light text color */
+  border: 1px solid #444444; /* Border color */
+  padding: 10px; /* Padding for better appearance */
+}
+
+textarea:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #66afe9; /* Border color on focus */
+}
